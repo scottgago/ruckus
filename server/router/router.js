@@ -10,6 +10,6 @@ module.exports = (app, express) => {
 	//register crimeScore controller
 	require('../controllers/crimeScore.controller.js')
 	
-	app.post('/api/crime', crimeScoreController.getCrimeAroundBars )
-	app.post('/api/vice')
+	app.post('/api/crime', crimeScoreController.getCrime )
+	app.post('/api/vice', crimeScoreController.getBars )
 }
