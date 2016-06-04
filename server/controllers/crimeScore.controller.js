@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-const request = require('request')
+const crimeData = require('../models/model.crimeData.js');
+const yelpAPI = require('../lib/yelpAPI.js');
+
+module.exports = {
+	getCrimeAroundBars: (req, res) => {
+		
+	}
+};
 
 
-module.exports = (req,res,next) =>{
-
-	request("https://jgentes-Crime-Data-v1.p.mashape.com/crime")
-
-}
-=======
-const crimeData = require('../models/model.crimeData.js')
-
-module.exports = (app,express) => {
-
-}
-
->>>>>>> crime
