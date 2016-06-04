@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ruckusgroup/ruckus#readme",
   "dependencies": {
     "express": "^4.13.4",
-    "request": "^2.72.0"
+    "request": "^2.72.0",
+    "yelp": "^1.0.1"
   }
 }
