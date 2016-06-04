@@ -1,0 +1,22 @@
+{
+  "name": "ruckus",
+  "version": "0.0.1",
+  "description": "Crime heatmap around bars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruckusgroup/ruckus.git"
+  },
+  "author": "Ruckus Group",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruckusgroup/ruckus/issues"
+  },
+  "homepage": "https://github.com/ruckusgroup/ruckus#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
