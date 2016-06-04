@@ -1,8 +1,6 @@
-const request = require('request')
+const crimeData = require('../models/model.crimeData.js')
 
-
-module.exports = (req,res,next) =>{
-
-	request("https://jgentes-Crime-Data-v1.p.mashape.com/crime")
+module.exports = (app,express) => {
 
 }
+
