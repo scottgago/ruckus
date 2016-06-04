@@ -29,6 +29,7 @@ class weather extends Component {
   }
 
   onRegionChangeComplete(region) {
+    if(this.state.initialPosition !== '')
     this.setState({pin: {
       longitude: region.longitude,
       latitude: region.latitude
@@ -39,18 +40,15 @@ class weather extends Component {
     //   console.log(data);
     //   this.setState(data)})
 
-
-
-
-
   componentDidMount() {
-    console.log('test');
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        console.log('inside navigator location', position);
-        var initialPosition = JSON.stringify(position);
+        var initialPosition = position;
         this.setState({initialPosition});
-        console.log(initialPosition);
+        this.setState({pin: {
+          longitude: initialPosition.coords.longitude,
+          latitude: initialPosition.coords.latitude
+        }})
       },
       (error) => alert(error.message),
       {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
