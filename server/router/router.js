@@ -8,8 +8,8 @@ module.exports = (app, express) => {
 	app.use(bodyParser.urlencoded({ extended: false }))
 	app.use(bodyParser.json())
 	//register crimeScore controller
-	require('../controllers/crimeScore.controller.js')(app,express)
+	require('../controllers/crimeScore.controller.js')
 	
-	app.post('/api/crime', crimeScoreController )
-	app.ppst('/api/vice')
+	app.post('/api/crime', crimeScoreController.getCrimeAroundBars )
+	app.post('/api/vice')
 }
