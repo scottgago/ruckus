@@ -11,7 +11,7 @@ const yelp = new Yelp({
 module.exports = {
   yelpSearch: latLongString => {
     return new Promise((resolve, reject) => {
-       yelp.search({term: 'bar', ll: '34.0210418,-118.4922241'})
+       yelp.search({term: 'bar', ll: latLongString})
         .then(data => {
           return resolve(data);
         })
