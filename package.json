@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ruckusgroup/ruckus/issues"
   },
-  "homepage": "https://github.com/ruckusgroup/ruckus#readme"
+  "homepage": "https://github.com/ruckusgroup/ruckus#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
