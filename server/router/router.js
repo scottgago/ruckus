@@ -6,5 +6,5 @@ module.exports = (app, express) => {
 	app.use(bodyParser.urlencoded({ extended: false }));
 	app.use(bodyParser.json());
 	//register crimeScore controller	
-	app.post('/api', crimeScoreController);
+	app.post('/api', crimeScoreController.getCrimeAroundBars);
 }
