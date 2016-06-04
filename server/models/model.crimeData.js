@@ -1,6 +1,6 @@
-const request = require('request')
+const request = require('request');
 
-var crimes = {}
+var crimes = {};
 
 request(crimeConfig.crimeData, (req, res) => {
 	for (var i = 0; i < res.body.length; i++) {
@@ -11,7 +11,7 @@ request(crimeConfig.crimeData, (req, res) => {
 			crimes[res.body[i].city].push(res.body[i]);
 		}
 	}
-})
+});
 
 module.exports = crimes;
 
