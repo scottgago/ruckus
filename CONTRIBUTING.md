@@ -15,15 +15,15 @@ Please make sure that there are not existing pull requests attempting to address
 Each commit message should include a **type**, a **scope** and a **subject**:
 
 ```
-  [feature]: <Subject> + <description>
+  [feature] <Subject> + <description>
 ```
 
 Lines should not exceed 100 characters. This allows the message to be easier to read on github as well as in various git tools and produces a nice, neat commit log.
 For example:
 
 ```
-#443  [chore]: updates to Ionicons v2
-#510  [feature]: adds home page controller
+#443  [chore] updates to Ionicons v2
+#510  [feature] adds home page controller
 ```
 
 #### Type
