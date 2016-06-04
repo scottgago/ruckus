@@ -24,39 +24,42 @@ class weather extends Component {
       },
       initialPosition: '',
       lastPosition: '',
-      watchId: ''
+      watchId: '',
+      go: true
      }
   }
 
-  onRegionChangeComplete(region) {
-    if(this.state.initialPosition !== '')
-    this.setState({pin: {
-      longitude: region.longitude,
-      latitude: region.latitude
-    }})
-  }
+  // onRegionChangeComplete(region) {
+  //   if(this.state.initialPosition !== '' && this.state.go) {
+  //     this.setState({pin: {
+  //       longitude: region.longitude,
+  //       latitude: region.latitude
+  //     }})
+  //     this.setState({go: false});
+  //   }
+  // }
 
     // fetchWeather(region.longitude, region.latitude).then((data) => {
     //   console.log(data);
     //   this.setState(data)})
 
   componentDidMount() {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        var initialPosition = position;
-        this.setState({initialPosition});
-        this.setState({pin: {
-          longitude: initialPosition.coords.longitude,
-          latitude: initialPosition.coords.latitude
-        }})
-      },
-      (error) => alert(error.message),
-      {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
-    );
-    this.state.watchID = navigator.geolocation.watchPosition((position) => {
-      var lastPosition = JSON.stringify(position);
-      this.setState({lastPosition});
-    });
+    // navigator.geolocation.getCurrentPosition(
+    //   (position) => {
+    //     var initialPosition = position;
+    //     this.setState({initialPosition});
+    //     this.setState({pin: {
+    //       longitude: initialPosition.coords.longitude,
+    //       latitude: initialPosition.coords.latitude
+    //     }})
+    //   },
+    //   (error) => alert(error.message),
+    //   {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
+    // );
+    // this.state.watchID = navigator.geolocation.watchPosition((position) => {
+    //   var lastPosition = JSON.stringify(position);
+    //   this.setState({lastPosition});
+    // });
   }
 
   componentWillUnmount() {
@@ -67,7 +70,7 @@ class weather extends Component {
 
     return (
       <View style= {styles.container}>
-        <MapView annotations= {[this.state.pin]} onRegionChangeComplete= {this.onRegionChangeComplete.bind(this)} style= {styles.map}>
+        <MapView annotations= {[this.state.pin]} showsUserLocation={true} style= {styles.map}>
         </MapView>
       </View>
     );
